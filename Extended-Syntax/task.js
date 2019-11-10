@@ -50,13 +50,6 @@ function calculateDrinkTask(){
     window.drink.textContent = drink;
 }
 
-function calculateDrinkTask() {
-	let name = window.personName.value;
-	let dateOfBirthday = new Date(window.dateOfBirthday.value);
-	let drink = askDrink(name, dateOfBirthday);
-	window.drink.textContent = drink;
-}
-
 function askDrink(name, dateOfBirthday) {
 	let age = (new Date().getFullYear()) - dateOfBirthday.getFullYear();
 
