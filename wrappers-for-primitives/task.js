@@ -25,9 +25,9 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 		}
 	}
 
-	percent = Number(percent);
-	contribution = Number(contribution);
-	amount = Number(amount);
+	percent = parseFloat(percent);
+	contribution = parseFloat(contribution);
+	amount = parseFloat(amount);
 	date = new Date(date);
 
 	let currentDate = new Date();
