@@ -27,11 +27,11 @@ function initPrintAnimalSound() {
 	document.getElementById('sound').innerHTML = result;
 }
 
-function getAnimalSound(animal) {
-	let sound = animal.sound;
+function getAnimalSound(animal) {	
 	if (typeof animal === 'undefined') {
 		return null;
 	} else
+		let sound = animal.sound;
 		return sound;
 }
 
