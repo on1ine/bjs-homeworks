@@ -49,9 +49,9 @@ function getAverageScore(data) {
   const result = {};
   let totalMark = 0;
 
-  for (const subject in data) {
-    const averageMark = getAverageArray(data[subject]);
-    result[subject] = averageMark;
+  for (const lessons in data) {
+    const averageMark = getAverageArray(data[lessons]);
+    result[lessons] = averageMark;
     totalMark += averageMark;
   }
 
@@ -91,22 +91,22 @@ console.log('Задача №3\n');
 function getPersonData(secretData) {
   const result = {};
   
-  for (let key in secretData) {
-    let newKey;
+  for (let property in secretData) {
+    let newProperty;
 
-    if (key === 'aaa') {
-      newKey = 'firstName';
+    if (property === 'aaa') {
+      newProperty = 'firstName';
     } else {
-      newKey = 'lastName';
+      newProperty = 'lastName';
     }
 
-    result[newKey] = decoder(secretData[key]);
+    result[newProperty] = decrypt(secretData[property]);
   }
 
   return result;
 }
 
-  function decoder(code) {
+  function decrypt(code) {
     return code ? 'Эмильо' : 'Родриго';
   }
 
