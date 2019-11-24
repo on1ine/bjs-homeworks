@@ -1,6 +1,5 @@
 'use strict'
 
-
 // Задача №1
 console.log('Задача №1\n');
 
@@ -20,7 +19,7 @@ const memoize = (fn, limit) => {
   const results = [];
 
   return function () {
-    const argFunction = Array.from(arguments);
+    const argFunction = Array.from(arguments); 
 
     let elCheck = results.find(result => compareArrays(result.args, argFunction));
     if (elCheck) {
