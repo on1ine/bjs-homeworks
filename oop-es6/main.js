@@ -258,12 +258,11 @@ console.log('Задача №3\n');
 class StudentLog {
 	constructor(name) {
 		this.name = name;
+		this.subjects = {};
 	}
 	getName () {
 		return this.name;
 	}
-
-	subjects = {};
 
 	addGrade(grade, subject) {
     if (!this.subjects[subject]) {
